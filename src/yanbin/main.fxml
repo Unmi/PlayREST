@@ -1,0 +1,41 @@
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="yanbin.Controller" minWidth="800">
+    <top>
+        <FlowPane hgap="5">
+            <ChoiceBox fx:id="host" value="localhost" prefHeight="24" prefWidth="120" maxWidth="120">
+                <String fx:value="localhost"/>
+                <String fx:value="mobdev"/>
+                <String fx:value="mobileservice"/>
+            </ChoiceBox>
+
+            <ChoiceBox fx:id="context" value="" prefHeight="24" prefWidth="100" maxWidth="100">
+                <String fx:value=""/>
+                <String fx:value="service"/>
+                <String fx:value="service_p2"/>
+            </ChoiceBox>
+
+            <TextField fx:id="path" prefHeight="24" prefWidth="400"/>
+
+            <ChoiceBox fx:id="method" value="GET" prefHeight="24" prefWidth="80" maxWidth="80">
+                <String fx:value="GET"/>
+                <String fx:value="POST"/>
+                <String fx:value="PUT"/>
+                <String fx:value="DELETE"/>
+                <String fx:value="HEAD"/>
+            </ChoiceBox>
+
+            <Button text="Send" onAction="#sendRequest" prefWidth="80"/>
+        </FlowPane>
+    </top>
+    <center>
+        <Label text="Some data here"/>
+    </center>
+</BorderPane>
