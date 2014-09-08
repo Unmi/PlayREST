@@ -1,5 +1,3 @@
-package yanbin;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,9 +8,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/main.fxml"));
         primaryStage.setTitle("Play REST Client");
-        primaryStage.setScene(new Scene(root, 800, 600));
+        primaryStage.setScene(new Scene(root, 1200, 800));
         primaryStage.show();
 //        javafx.scene.layout.FlowPane
     }
